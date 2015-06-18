@@ -55,6 +55,7 @@ module.exports = function(environment) {
 
   }
   ENV['simple-auth'] = {
+    crossOriginWhitelist: ['*'],
     authorizer: 'simple-auth-authorizer:devise',
     store: 'simple-auth-session-store:local-storage'
   }
