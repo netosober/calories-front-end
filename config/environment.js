@@ -18,9 +18,6 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-  ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:devise'
-  }
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -56,6 +53,10 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+  }
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise',
+    store: 'simple-auth-session-store:local-storage'
   }
 
   return ENV;
