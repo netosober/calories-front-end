@@ -2,8 +2,8 @@
 
 import Ember from 'ember';
 
-export function formattedDate(date, format) {
-  return moment(date).format(format);
+export function formattedDate(options) {
+  return moment(options[0]).format(options[1]);
 }
 
 export default Ember.HTMLBars.makeBoundHelper(formattedDate);

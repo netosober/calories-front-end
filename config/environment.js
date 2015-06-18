@@ -29,9 +29,9 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' http://localhost:3000/api/v1/meals",
+      'connect-src': "'self' http://localhost:3000",
       'img-src': "'self'",
-      'style-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'media-src': "'self'"
     }
   }

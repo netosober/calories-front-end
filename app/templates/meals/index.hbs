@@ -1,10 +1,11 @@
-<ul>
-  {{#each meal in model}}
+
+<ul class="unstyled">
+  {{#each model as |meal|}}
     <li>
       {{#link-to 'meal' meal}}
-        {{meal.description}},
-        {{meal.calories}} calories
+        <h3>{{meal.description}}</h3>
       {{/link-to}}
+      <span>{{meal.calories}} calories on {{formatted-date meal.day 'MMMM Do, YYYY'}}</span> 
     </li>
   {{else}}
     <li>No meals found.</li>

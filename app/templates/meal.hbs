@@ -1,12 +1,11 @@
-<h1>{{description}}</h1>
-
+<h1>{{model.description}}</h1>
 <dl>
   <dt>Calories</dt>
-  <dd>{{calories}}</dd>
+  <dd>{{model.calories}}</dd>
 </dl>
 
 <p>
-  Day eaten at: {{formatted-date day 'MMMM Do, YYYY'}}
+  Day eaten at:  {{formatted-date model.day 'MMMM Do, YYYY'}}
   <br>
-  Hour eaten at: {{formatted-date hour 'h:mm a'}}
+  Hour eaten at: {{formatted-date model.hour 'hh:mm:ss'}}
 </p>
