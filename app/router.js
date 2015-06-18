@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('meals', function() {
     this.resource('meal', { path: '/:meal_id' });
   });
+  this.route('login');
 });
 
 export default Router;

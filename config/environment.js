@@ -18,7 +18,9 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise'
+  }
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -34,6 +36,9 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'media-src': "'self'"
     }
+    ENV['simple-auth-devise'] = {
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/users/sign_in'
+    }
   }
 
   if (environment === 'test') {
@@ -46,6 +51,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
   }
 
   if (environment === 'production') {
