@@ -10,6 +10,8 @@ Router.map(function() {
     this.resource('meal', { path: '/:meal_id' });
   });
   this.route('login');
+  this.route('register');
+  this.route('profile');
 });
 
 export default Router;

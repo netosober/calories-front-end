@@ -2,27 +2,30 @@
   <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">Diet diary</a></h1>
+        <h1>{{link-to 'Diet diary' 'index'}}</h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
+        {{#if session.isAuthenticated}}
         <li>
-          {{#if session.isAuthenticated}}
-            <a {{ action 'invalidateSession' }}>Logout</a>
-          {{else}}
-            {{#link-to 'login'}}Login{{/link-to}}
-          {{/if}}
+          <a {{ action 'invalidateSession' }}>Logout</a>
         </li>
-        <li><a href='#'>Profile</a></li>
+        <li>{{link-to 'Profile' 'profile'}}</li>
+        {{else}}
+        <li>{{link-to 'Login' 'login'}}</li>
+        <li>{{link-to 'Register' 'register'}}</li>
+        {{/if}}
       </ul>
       <!-- Left Nav Section -->
+      {{#if session.isAuthenticated}}
       <ul class="left">
         <li>{{link-to 'Home' 'index'}}</li>
         <li>{{link-to 'Meals' 'meals'}}</li>
       </ul>
+      {{/if}}
     </section>
   </nav>
 </div>

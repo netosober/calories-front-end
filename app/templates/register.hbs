@@ -1,0 +1,12 @@
+<div class="row">
+  <h2>Register</h2>
+  <form {{action 'register' on='submit'}}>
+    <label for="email">Email</label>
+    {{input id='email' placeholder='Enter email' value=email}}
+    <label for="password">Password</label>
+    {{input id='password' placeholder='Enter Password' type='password' value=password}}
+    <label for="password">Password confirmation</label>
+    {{input id='password_confirmation' placeholder='Enter Password confirmation' type='password' value=password_confirmation}}
+    <button type="submit">Register</button>
+  </form>
+</div>
