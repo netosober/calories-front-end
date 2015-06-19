@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="large-12 columns">
+    {{input id='description' placeholder='Enter Description' value=model.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 columns">
+    {{input id='calories' placeholder='Enter Calories' type='number' value=model.calories}}
+  </div>
+  <div class="large-4 columns">
+    {{pikaday-input value=model.day format="MM/DD/YYYY"}}
+  </div>
+  <div class="large-4 columns">
+    {{input id='hour' type='time' value=model.hour}}
+  </div>
+</div>

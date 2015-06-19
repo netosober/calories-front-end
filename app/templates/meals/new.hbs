@@ -1,0 +1,8 @@
+<div class="row">
+  <h2>New meal</h2>
+  <form {{action 'create' on='submit'}}>
+    {{partial "meals/_form"}}
+    <button type="submit">Create</button>
+    <button {{action 'cancel'}}>Cancel</button>
+  </form>
+</div>

@@ -6,8 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('meals', function() {
-    this.resource('meal', { path: '/:meal_id' });
+  this.resource('meals', { path: '/meals' }, function() {
+    this.route('edit', { path: '/:meal_id' });
+    this.route('new', { path: '/new' });
   });
   this.route('login');
   this.route('register');
